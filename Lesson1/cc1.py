@@ -1,3 +1,4 @@
+# coding: utf-8
 import unittest
 
 # Given a string and a non-negative int n, return a larger string
@@ -11,8 +12,7 @@ def string_times(string, n):
 def array_front9(nums):
     bool = False
     longueur = min(len(nums),4)
-    for i in range(longueur + 1):
-        print(nums[i])
+    for i in range(longueur):
         if nums[i] == 9:
             bool = True
     return bool
