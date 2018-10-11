@@ -14,10 +14,12 @@ def build_soup_from_url(url):
 
 
 def get_all_performance(society_list):
+    # Build Data Frame
     df = pd.DataFrame(columns = \
-            ["Society","Stock_Sales","Stock_Price","Stock_Variation", \
-                "Shares_Owned","DY_Company","DY_Sector","DY_Industry"])
-    i_society = 0
+            ["Stock_Sales","Stock_Price","Stock_Variation", \
+                "Shares_Owned","DY_Company","DY_Sector","DY_Industry"], \
+                index = society_list)
+    # Get all performance for all society
     for society in society_list:
         url = url_prefix + society
         soup = build_soup_from_url(url)
@@ -26,12 +28,10 @@ def get_all_performance(society_list):
         stock_variation = get_stock_variation(soup)
         shares_owned = get_shares_Owned(soup)
         dividend_yield = get_dividend_yield(soup)
-        performance_list = [society, stock_sales, stock_price, \
-                                stock_variation, shares_owned, dividend_yield[0], \
-                                    dividend_yield[1], dividend_yield[2]]
-        df.loc[i_society] = performance_list
-        i_society += 1
-    df.set_index("Society")
+        performance_list = [stock_sales, stock_price, stock_variation, \
+                                shares_owned, dividend_yield[0], dividend_yield[1], \
+                                    dividend_yield[2]]
+        df.loc[society] = performance_list
     return df
 
 
