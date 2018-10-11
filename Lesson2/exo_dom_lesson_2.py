@@ -18,7 +18,7 @@ def get_all_performance(society_list):
     df = pd.DataFrame(columns = \
             ["Stock_Sales","Stock_Price","Stock_Variation", \
                 "Shares_Owned","DY_Company","DY_Sector","DY_Industry"], \
-                index = society_list)
+                    index = society_list)
     # Get all performance for all society
     for society in society_list:
         url = url_prefix + society
