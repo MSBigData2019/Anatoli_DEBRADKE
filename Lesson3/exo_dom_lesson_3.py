@@ -41,7 +41,7 @@ def get_best_contributor():
     best_contributor = {}
     for contributor in top_contributor:
         best_contributor[contributor] = get_contributor_stars(contributor)
-    sorted_best_contributor = sorted(best_contributor.items(), key=lambda kv: kv[1], reverse=True)
+    sorted_best_contributor = sorted(best_contributor.items(), key = lambda kv: kv[1], reverse = True)
     return sorted_best_contributor
 
 print(get_best_contributor())
