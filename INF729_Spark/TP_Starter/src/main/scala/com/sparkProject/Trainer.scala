@@ -35,14 +35,16 @@ object Trainer {
       .getOrCreate()
 
 
+
     /** 1 - CHARGEMENT DES DONNEES
       *
       * Chargement des données préparées dans par le Preprocessor.
       *
       **/
 
-
-    val df: DataFrame = spark.read.parquet("/Users/anatoli_debradke/Desktop/MS_BGD/INF729_Hadoop/Spark/TP/TP_Starter/prepared_trainingset")
+    val df: DataFrame = spark
+      .read
+      .parquet("/Users/anatoli_debradke/Desktop/MS_BGD/INF729_Hadoop/Spark/TP/TP_Starter/prepared_trainingset")
 
 
 
