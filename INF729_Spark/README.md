@@ -5,7 +5,7 @@ TP 3 : Machine learning avec Spark
 Réalisation : Anatoli de BRADKE
 
 Remarques:
-- l'attribut 'path' dans les fonctions de read et de write csv doivent être modifier avant de compiler.
+- l'attribut 'path' dans les fonctions de read et de write csv doivent être modifier dans les classes Preprocessor et Trainer avant de compiler.
 - le temps d'excecution est d'environ 5/10min.
 
 Classification:
