@@ -5,7 +5,7 @@ import pandas as pd
 import json
 
 userID = "Anatoli-deBRADKE"
-token = "6711aaa1d2de1d3d35865226674c8fb731fe24df"
+token = "9cd4072eb166d1b41a0bac0f4a0dc9908641f2f6"
 
 def build_soup_from_url(url):
     page = requests.get(url)
